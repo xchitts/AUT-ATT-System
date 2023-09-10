@@ -1,0 +1,322 @@
+.student-body{
+    height: 100%;
+    height: 100%;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.student-body .response-sms-bubble{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 50px;
+  background-color: #008800;
+  border-radius: 3px;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity .2s ease-in-out;
+  padding: 0 1em;
+}
+.student-body .response-sms-bubble span{
+  color: #FFF;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.student-body .search-filter{
+    width: 100%;
+    min-height: 50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4em;
+    box-shadow: inset 0.05rem 0.05rem 0.4rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fff;
+}
+.search-filter .search-select-group{
+    height: 100%;
+    width: 60%;
+    display: flex;
+}
+.search-filter .search-input-group{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.search-filter .select-group{
+    height: 100%;
+    width: 200px;
+    margin-right: 5px;
+}
+.search-filter .input-group{
+    height: 100%;
+    width: 200px;
+    position: relative;
+}
+.search-filter .select-group select{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    padding: .5em;
+    cursor: pointer;
+    text-align: center;
+    font-size: .85rem;
+    box-shadow: inset 0.05rem 0.05rem 0.4rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fff;
+}
+.search-filter .input-group input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #f2f2f2;
+    padding: .5em;
+    padding-left: 2.5em;
+}
+.search-filter .input-group i{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+}
+.student-body .student-table{
+    width: 100%;
+    max-height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.content-table {
+    border-collapse: collapse;
+    font-size: 0.7em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    background-color: #FFF;
+  }
+  .content-table thead tr {
+    background-color: #DA932C;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    font-size: .8em;
+  }
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+    text-align: center;
+    letter-spacing: .8px;
+  }
+  .content-table th:first-child,
+  .content-table td:first-child{
+    width: 200px;
+  }
+  .content-table th:nth-child(2),
+  .content-table td:nth-child(2){
+    text-align: left;
+  }
+  .content-table th:nth-child(3),
+  .content-table td:nth-child(3){
+    width: 100px;
+  }
+  .content-table th:nth-child(4),
+  .content-table td:nth-child(4){
+    width: 140px;
+  }
+  .content-table th:nth-child(5),
+  .content-table td:nth-child(5){
+    width: 200px;
+  }
+  .content-table th:last-child,
+  .content-table td:last-child{
+    width: 90px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  .content-table tbody{
+    border-bottom: 2px solid #ffcc33;
+  }
+
+  thead tr{
+    position: sticky;
+    top: 0;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+  }
+  .content-table tbody tr{
+    border-left: 1px solid #d9d9d9;
+  }
+  /* .content-table tbody {
+    display: block;
+    height: 300px;
+    overflow-y: auto;
+} */
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #e69900;
+  }
+
+  .table-wrapper{
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+
+  /* SCROLL BAR */
+  #scrollbar::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  #scrollbar::-webkit-scrollbar{
+    width: 3px;
+    background-color: #fff;
+  }
+  #scrollbar::-webkit-scrollbar-thumb{
+    background-color: #000;
+}
+
+/* MODAL */
+
+.update-student-information-modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.update-student-information-modal .modal-content{
+  width: 450px;
+  /* height: 90%; */
+  background-color: #fff;
+  padding: 1em;
+  animation: scale 0.5s ease;
+  border-radius: 0 0 3px 3px;
+  border-top: 5px solid #DA932C;
+  box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
+      100px 100px 80px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.modal-content .modal-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #404040;
+  user-select: none;
+  height: 30px;
+}
+.modal-header span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+.modal-content-body{
+  width: 100%;
+}
+.modal-content-body form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  justify-content: center;
+}
+.modal-content-body form .all-input-groups{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.all-input-groups .input-group,
+.all-input-groups .select-group{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.all-input-groups .input-group span,
+.all-input-groups .select-group span{
+  position: absolute;
+  top: -5.5px;
+  left: 32px;
+  background-color: #FFF;
+  color: #333333;
+  font-size: .6rem;
+  font-weight: 700;
+}
+.all-input-groups .input-group i,
+.all-input-groups .select-group i{
+  z-index: 1;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  opacity: .8;
+}
+.all-input-groups .input-group input,
+.all-input-groups .select-group select{
+  height: 100%;
+  width: 100%;
+  padding: .25em .1em .25em 3em;
+  font-weight: bold;
+  font-size: .7rem;
+  color: red;
+  border: 2px solid #ffcc22;
+  border-radius: 3px;
+}
+.all-input-groups .input-group input:focus,
+.all-input-groups .select-group select:focus{
+  outline: none;
+  border: 2px solid #008800;
+}
+.modal-content-body .btn-group{
+  height: 40px;
+  width: 80%;
+}
+.modal-content-body .btn-group button{
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #FFF;
+  border: none;
+  background-color: #008800;
+}
+.modal-content-body .btn-group button:hover{
+  background-color: #009900;
+}

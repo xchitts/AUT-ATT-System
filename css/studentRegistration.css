@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #d9d9d9 !important;
+    background: rgb(0,128,0);
+    background: linear-gradient(90deg, rgba(0,128,0,.5) 14%, rgba(255,255,255,.5) 50%, rgba(255,192,0,.5) 86%);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .status{
+    width: 450px;
+    height: 50px;
+    background-color: #FFF;
+    border: 1px solid #17C63D;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: .25em 1em;
+    /* position: relative; */
+    /* display: none; */
+}
+/* .container .status::after{
+    content: "\00d7";
+    position: absolute;
+    right: 0;
+} */
+.container #statusSuccess{
+    display: none;
+}
+.container #statusFailed{
+    display: none;
+    border: 1px solid #ff3300;
+}
+.status span{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.status span i{
+    font-size: .8rem;
+    margin-right: 5px;
+}
+#statusSuccess span{
+    color: #00b300;
+}
+#statusFailed span{
+    color: #ff3300;
+}
+
+.container .wrapper{
+    width: 450px;
+    height: 480px;
+    background-color: #FFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 5px solid #FFC000;
+    padding: 1em;
+}
+.wrapper .card{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper .card form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .title{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.title span{
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #333333;
+}
+.card .input-group{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.input-group i{
+    z-index: 1;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    opacity: .8;
+}
+.input-group input{
+    width: 100%;
+    height: 100%;
+    padding: .25em 1em .25em 3em;
+    border: 2px solid #FFC000;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: .7rem;
+    color: #333333;
+}
+.input-group input:focus{
+    outline: none;
+    border: 2px solid #008000;
+}
+.input-group select{
+    width: 100%;
+    height: 100%;
+    padding: .25em 1em .25em 3em;
+    border: 2px solid #FFC000;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: .7rem;
+    color: #808080;
+    cursor: pointer;
+}
+.input-group select:hover{
+    outline: none;
+    border: 2px solid #008000;
+}
+.input-group select option{
+    font-size: .7rem;
+    font-weight: bold;
+}
+.input-group span{
+    position: absolute;
+    top: -5.5px;
+    left: 32px;
+    background-color: #FFF;
+    color: #333333;
+    font-size: .6rem;
+    font-weight: 700;
+}
+.card .btn-group{
+    width: 80%;
+    height: 40px;
+}
+.btn-group button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #008000;
+    color: #FFFF;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.btn-group button:hover{
+    background-color: #009900;
+}
+
+
+
+@media screen AND (max-width: 460px) {
+    body .container{
+        padding: 0 .5em;
+    }
+    .container .status{
+        width: 100%;
+    }
+    .container .wrapper{
+        width: 100%;
+    }
+    .card .input-group, .card .btn-group{
+        width: 95%;
+    }
+}
